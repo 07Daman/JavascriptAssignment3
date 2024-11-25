@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Smoothie Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🍹 Build Your Dream Smoothie</h1>
+        <p>Fresh, delicious, and made just for you!</p>
+    </header>
+
+    <main>
+        <form id="smoothieForm">
+            <div class="form-section">
+                <label for="customerName">Your Name:</label>
+                <input type="text" id="customerName" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-section">
+                <label for="base">Choose your base:</label>
+                <select id="base" required>
+                    <option value="" disabled selected>Select a base</option>
+                    <option value="Milk" data-price="1">🥛 Milk ($1.00)</option>
+                    <option value="Almond Milk" data-price="1.5">🌰 Almond Milk ($1.50)</option>
+                    <option value="Soy Milk" data-price="2">🌱 Soy Milk ($2.00)</option>
+                    <option value="Water" data-price="0.5">💧 Water ($0.50)</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <fieldset>
+                    <legend>Choose your fruits:</legend>
+                    <label><input type="checkbox" value="Banana" data-price="1"> 🍌 Banana ($1.00)</label>
+                    <label><input type="checkbox" value="Strawberry" data-price="1.5"> 🍓 Strawberry ($1.50)</label>
+                    <label><input type="checkbox" value="Blueberry" data-price="2"> 🫐 Blueberry ($2.00)</label>
+                    <label><input type="checkbox" value="Mango" data-price="2.5"> 🥭 Mango ($2.50)</label>
+                </fieldset>
+            </div>
+
+            <div class="form-section">
+                <fieldset>
+                    <legend>Add-ons:</legend>
+                    <label><input type="checkbox" value="Protein Powder" data-price="2"> 💪 Protein Powder ($2.00)</label>
+                    <label><input type="checkbox" value="Chia Seeds" data-price="1"> 🌾 Chia Seeds ($1.00)</label>
+                    <label><input type="checkbox" value="Honey" data-price="1.5"> 🍯 Honey ($1.50)</label>
+                </fieldset>
+            </div>
+
+            <div class="form-section">
+                <label for="size">Smoothie Size:</label>
+                <select id="size" required>
+                    <option value="" disabled selected>Select a size</option>
+                    <option value="Small" data-price="4">Small ($4.00)</option>
+                    <option value="Medium" data-price="6">Medium ($6.00)</option>
+                    <option value="Large" data-price="8">Large ($8.00)</option>
+                </select>
+            </div>
+
+            <button type="button" id="orderBtn">Blend My Smoothie!</button>
+        </form>
+
+        <div id="blendingProcess" class="hidden">
+            <h2>🌀 Blending Your Smoothie...</h2>
+            <p id="countdown">2 seconds left...</p>
+        </div>
+
+        <div id="orderSummary" class="hidden">
+            <h2>🍹 Your Smoothie is Ready!</h2>
+            <div id="smoothieImage" class="smoothie-img">
+                <img src="images/smoothie.jpg" alt="Your Custom Smoothie" />
+            </div>
+            <p id="summaryDetails"></p>
+            <div id="priceBreakdown"></div>
+            
+            <div id="thankYouMessage" class="hidden">Thank you for ordering! 🌟</div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

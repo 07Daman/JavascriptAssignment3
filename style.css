@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #34a0a4, #52b69a, #76c893);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px #028090;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+main {
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+}
+
+label, legend {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select, button {
+    padding: 10px;
+    border: 2px solid #76c893;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background: #028090;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #007f80;
+}
+
+fieldset {
+    border: 2px solid #76c893;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#blendingProcess, #orderSummary {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#orderSummary {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#priceBreakdown {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.smoothie-img {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.smoothie-img img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    animation: slideIn 1s ease-in-out;
+}
+
+#thankYouMessage {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #028090;
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
